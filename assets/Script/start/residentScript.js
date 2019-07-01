@@ -95,7 +95,6 @@ cc.Class({
 	changeMePos(data) {
 		for(let i = 0; i < data.length; i++) {
             if(data[i].user.openid == this.me.openid) {
-                console.log('收到users消息');
                 cc.find('resident').emit('changePos',data[i]);
             }
 		}

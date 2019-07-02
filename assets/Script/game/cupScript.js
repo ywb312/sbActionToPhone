@@ -107,8 +107,9 @@ cc.Class({
         var x = Math.floor(obj.ballNode.x*1.75);
         var y = Math.floor((obj.ballNode.y-5)*1.41-157.5);
         var ck = obj.mouseDown;
+        let tool = cc.find('resident').getComponent('residentScript').tool;
         var data = {
-            x,y,ck
+            x,y,ck,tool
         }
         cc.find('resident').emit('setPos',data);
     },

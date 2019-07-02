@@ -75,6 +75,7 @@ cc.Class({
                 + '","data":{"x":"'+ data.x
                 + '","y":"'+ data.y
                 + '","ck":"'+ data.ck
+                + '","tool":"'+ data.tool
                 + '"}}');
         });
     },

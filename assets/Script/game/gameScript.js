@@ -14,8 +14,7 @@ cc.Class({
         this.clickAble = false;
     },
     start () {
-        // cc.director.preloadScene('slow',()=>{});
-        cc.director.preloadScene('select',()=>{});
+        // cc.director.preloadScene('select',()=>{});
         cc.director.preloadScene('final',()=>{});
         cc.director.preloadScene('again',()=>{});
         this.scheduleOnce(()=>{

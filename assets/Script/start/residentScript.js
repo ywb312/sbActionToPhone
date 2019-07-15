@@ -109,9 +109,9 @@ cc.Class({
         }
     },
     getCrash(data){
-        if (data.openid == this.me.openid) {
-            cc.director.loadScene('select');
-        }
+        // if (data.openid == this.me.openid) {
+        //     cc.director.loadScene('select');
+        // }
     },
     // 对数据进行修改
     getPacketText(){

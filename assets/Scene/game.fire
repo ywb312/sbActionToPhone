@@ -830,8 +830,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 259.2,
-      "height": 229
+      "width": 190,
+      "height": 218
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -876,7 +876,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "5c0390bd-1595-41fe-b17f-1ea93699f7ae"
+      "__uuid__": "1b5580da-169c-49bd-8beb-0813129b718d"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -904,66 +904,18 @@
     "ballNode": {
       "__id__": 18
     },
-    "cupPicArr": [
-      {
-        "__uuid__": "c63eb037-5d70-4a0c-8c34-d3ba7c8b3601"
-      },
-      {
-        "__uuid__": "5c0390bd-1595-41fe-b17f-1ea93699f7ae"
-      },
-      {
-        "__uuid__": "78dc7e2e-da8e-4cda-8a33-3325c4dc2d92"
-      },
-      {
-        "__uuid__": "b4986d34-e320-4599-91e8-8ffe4d81b8f8"
-      },
-      {
-        "__uuid__": "9ed7a484-280b-427d-91c2-c15a301e3862"
-      },
-      {
-        "__uuid__": "7d140cfe-0306-4d9a-b834-2de762ce9232"
-      }
-    ],
-    "penPicArr": [
-      {
-        "__uuid__": "da2d4c0e-9f76-4574-9db8-db96aea80f97"
-      },
-      {
-        "__uuid__": "52388d91-1ea5-4411-8ca4-a78254acc1f1"
-      },
-      {
-        "__uuid__": "038db44f-83d4-4a46-acc7-7b9820c4bc57"
-      },
-      {
-        "__uuid__": "e48c24b6-1502-49e3-901a-3c10b8301fc0"
-      },
-      {
-        "__uuid__": "fa0f7820-f51f-40a5-b410-5480415056de"
-      },
-      {
-        "__uuid__": "754eec64-c218-41e1-8c78-1cebe7386428"
-      }
-    ],
-    "gangPicArr": [
-      {
-        "__uuid__": "d300018f-9e36-42aa-ae76-da79cf97e10f"
-      },
-      {
-        "__uuid__": "1e4782a0-b748-434d-a1a8-adeed07bdaae"
-      },
-      {
-        "__uuid__": "0be8e1e8-c4b8-4f8e-b24a-4e73f5919873"
-      },
-      {
-        "__uuid__": "d279f423-60b5-4aef-afec-e920e2085fa7"
-      },
-      {
-        "__uuid__": "052d45b4-80ab-423c-9a44-0ab1bf4d21a5"
-      },
-      {
-        "__uuid__": "7d949900-5cb1-4ebb-a918-79e84dfa5b00"
-      }
-    ],
+    "bzPicArr": {
+      "__uuid__": "1b5580da-169c-49bd-8beb-0813129b718d"
+    },
+    "jpPicArr": {
+      "__uuid__": "69b168f8-2433-4fa3-90ed-d25698157bde"
+    },
+    "mtPicArr": {
+      "__uuid__": "5de14f7c-c865-4f01-9c89-543623a3e4d2"
+    },
+    "wanPicArr": {
+      "__uuid__": "8253cdb1-ef4a-4212-bc52-75a236ff2ede"
+    },
     "_id": "b4+C9PcslJRKwMuyJZ63nS"
   },
   {

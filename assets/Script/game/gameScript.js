@@ -27,7 +27,7 @@ cc.Class({
         //碰撞后改变杯子位置
         cc.find('resident').on('changePos',function(data){
             if (cc.find('Canvas/bz/img')!=null) {
-                cc.find('Canvas/bz/img').setPosition(data.x/1.75,Math.floor(((data.y+157.5)/1.41)+5));
+                cc.find('Canvas/bz/img').setPosition((data.x-30)/1.61,Math.floor(((data.y+15)/1.75)-5));
                 // cc.find('Canvas/bz').getComponent('cupScript').offMove();
                 // setTimeout(() => {
                 //     cc.find('Canvas/bz').getComponent('cupScript').onMove();

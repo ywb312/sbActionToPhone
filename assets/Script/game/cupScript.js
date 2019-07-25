@@ -73,7 +73,7 @@ cc.Class({
     changePic(){
         let type = cc.find('resident').getComponent('residentScript').tool;
         switch (type) {
-            case 0:
+            case "100":
                 this.ballNode.getComponent(cc.Sprite).spriteFrame = this.bzPicArr;
                 break;
             case "200":

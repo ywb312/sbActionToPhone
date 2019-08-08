@@ -65,6 +65,9 @@ cc.Class({
             if (data.action == 'leave') {
                 obj.removePlayer(data.data);
             }
+            if (data.action == 'score') {
+                cc.find('resident').emit('changeScore',data.data);
+            }
         };
         webSocket.onclose = function(){
             console.log("撒币大行动链接关闭");

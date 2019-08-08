@@ -17,6 +17,12 @@ cc.Class({
         // cc.director.preloadScene('select',()=>{});
         cc.director.preloadScene('final',()=>{});
         cc.director.preloadScene('again',()=>{});
+        // 设置左上角头像
+        cc.loader.load({ url: cc.find('resident').getComponent('residentScript').me.avatar, type: 'jpg' }, function (err, ttt) {
+            var newFra = new cc.SpriteFrame;
+            newFra.setTexture(ttt);
+            cc.find('Canvas/top/self/headImg').getComponent(cc.Sprite).spriteFrame = newFra;
+        });
         this.scheduleOnce(()=>{
             cc.find('Canvas/bz/img').runAction(cc.scaleTo(1,1));
             this.scheduleOnce(()=>{
@@ -33,6 +39,10 @@ cc.Class({
                 //     cc.find('Canvas/bz').getComponent('cupScript').onMove();
                 // },500);
             }
+        });
+        // 收到分数渲染
+        cc.find('resident').on('changeScore',function(data){
+            console.log(data);
         });
         // 结束游戏 got消息
         cc.find('resident').on('goEnd',function(data){

@@ -12,19 +12,6 @@ cc.Class({
         qrCodeNode: cc.Node,
     },
     start() {
-        // 实时更新输入金币 按钮状态
-        // this.schedule(() => {
-        //     var num = cc.find('Canvas/setMoney/input').getComponent(cc.EditBox).string;
-        //     cc.find('Canvas/show/total').getComponent(cc.Label).string = '￥' + cc.find('resident').getComponent("residentScript").toDecimal2(num);
-        //     cc.find('Canvas/setMoney/text').getComponent(cc.Label).string = cc.find('resident').getComponent("residentScript").toDecimal2(num) * 100;
-        //     if (cc.find('Canvas/show/total').getComponent(cc.Label).string != '￥0.00') {
-        //         cc.find('Canvas/btn/noMoney').active = false;
-        //         cc.find('Canvas/btn/money').active = true;
-        //     } else {
-        //         cc.find('Canvas/btn/noMoney').active = true;
-        //         cc.find('Canvas/btn/money').active = false;
-        //     }
-        // }, 0.3);
         let _self = this;
         this.setHeadBox();
         this.getPayNum();
@@ -63,9 +50,9 @@ cc.Class({
                 let num = (res.fee/100);
                 let list = cc.find('resident').getComponent('residentScript').userList;
                 _self.fee = res.fee;
-                var sum = res.fee * 4;
+                var sum = res.fee * 4 / 5;
                 if (list.length>4) {
-                    sum = res.fee * list.length;
+                    sum = res.fee * list.length / 5;
                 }
                 _self.schedule(()=>{
                     cc.find('Canvas/sumLabel').getComponent(cc.Label).string = sum/100;
@@ -127,7 +114,7 @@ cc.Class({
         var baseURL = cc.find('resident').getComponent('residentScript').dealHost('create');
         var obj = {
             type:1,
-            coins: num,
+            coins: num / 5,
             fee: num,
         }
         var str = cc.find('resident').getComponent('residentScript').setObjData(obj);

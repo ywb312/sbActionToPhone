@@ -6,6 +6,8 @@ cc.Class({
         jpPicArr:cc.SpriteFrame,
         mtPicArr:cc.SpriteFrame,
         wanPicArr:cc.SpriteFrame,
+        imgNode:cc.Node,
+        boxPic:cc.Node,
     },
     onLoad(){
         this.changePic();
@@ -36,10 +38,10 @@ cc.Class({
         //获取鼠标距离上一次点的信息
         let delta = event.getDelta();
         //增加限定条件
-        let minX = -180;
-        let maxX = 180;
-        let minY = -315;
-        let maxY = 300;
+        let minX = -175;
+        let maxX = 175;
+        let minY = -330;
+        let maxY = 234;
         let moveX = this.ballNode.x + delta.x;
         let moveY = this.ballNode.y + delta.y;
         //控制移动范围
@@ -60,8 +62,8 @@ cc.Class({
     // 上传位置信息
     selfPos(obj){
         // x,y为大屏幕上显示的位置
-        var x = Math.floor(obj.ballNode.x*1.61)+30;
-        var y = Math.floor((obj.ballNode.y+5)*1.75-15);
+        var x = Math.floor(obj.ballNode.x*1.66)+30;
+        var y = Math.floor((obj.ballNode.y+48)*1.9-15);
         var ck = obj.mouseDown;
         let tool = cc.find('resident').getComponent('residentScript').tool;
         var data = {
@@ -74,16 +76,20 @@ cc.Class({
         let type = cc.find('resident').getComponent('residentScript').tool;
         switch (type) {
             case "100":
-                this.ballNode.getComponent(cc.Sprite).spriteFrame = this.bzPicArr;
+                this.boxPic.setPosition(-14,-25);
+                this.imgNode.getComponent(cc.Sprite).spriteFrame = this.bzPicArr;
                 break;
             case "200":
-                this.ballNode.getComponent(cc.Sprite).spriteFrame = this.jpPicArr;
+                this.boxPic.setPosition(0,-30);
+                this.imgNode.getComponent(cc.Sprite).spriteFrame = this.jpPicArr;
                 break;
             case "300":
-                this.ballNode.getComponent(cc.Sprite).spriteFrame = this.mtPicArr;
+                this.boxPic.setPosition(0,-20);
+                this.imgNode.getComponent(cc.Sprite).spriteFrame = this.mtPicArr;
                 break;
             case "400":
-                this.ballNode.getComponent(cc.Sprite).spriteFrame = this.wanPicArr;
+                this.boxPic.setPosition(0,-38);
+                this.imgNode.getComponent(cc.Sprite).spriteFrame = this.wanPicArr;
                 break;
         }
     },

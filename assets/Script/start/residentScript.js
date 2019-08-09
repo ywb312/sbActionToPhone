@@ -66,7 +66,10 @@ cc.Class({
                 obj.removePlayer(data.data);
             }
             if (data.action == 'score') {
-                cc.find('resident').emit('changeScore',data.data);
+                cc.find('resident').emit('changeScore',data.data[0]);
+            }
+            if (data.action == 'mobile') {
+                cc.find('resident').emit('broken',data.data[0]);
             }
         };
         webSocket.onclose = function(){

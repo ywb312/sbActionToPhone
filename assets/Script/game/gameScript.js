@@ -12,7 +12,6 @@ cc.Class({
         coinPic:cc.SpriteFrame,
     },
     onLoad() {
-        this.clickAble = false;
         this.score = 0;
     },
     start () {
@@ -20,15 +19,6 @@ cc.Class({
         // cc.director.preloadScene('select',()=>{});
         cc.director.preloadScene('final',()=>{});
         cc.director.preloadScene('again',()=>{});
-        this.scheduleOnce(()=>{
-            cc.find('Canvas/bz/ball/img').runAction(cc.scaleTo(1,1));
-            this.scheduleOnce(()=>{
-                cc.find('Canvas/mask').active = false;
-                cc.find('Canvas/top').active = true;
-                cc.find('Canvas/background/topText').active = true;
-                this.clickAble = true;
-            },1);
-        },2);
         // 设置左上角头像
         cc.loader.load({ url: cc.find('resident').getComponent('residentScript').me.avatar, type: 'jpg' }, function (err, ttt) {
             var newFra = new cc.SpriteFrame;
@@ -61,7 +51,7 @@ cc.Class({
             _self.timer = setTimeout(() => {
                 cc.find('Canvas/background/topText/explain1').active = true;
                 cc.find('Canvas/background/topText/explain2').active = false;
-            }, 2000);
+            },2000);
         });
         // 结束游戏 got消息
         cc.find('resident').on('goEnd',function(data){

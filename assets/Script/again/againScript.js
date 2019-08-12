@@ -48,8 +48,8 @@ cc.Class({
             if (xhr.readyState == 4 && xhr.status == 200) {
                 var res = JSON.parse(xhr.responseText);
                 let num = (res.fee/100);
-                _self.fee = res.fee / 5;
-                var sum = _self.fee * 4;
+                _self.fee = res.fee;
+                var sum = res.fee * 4 / 5;
                 _self.schedule(()=>{
                     cc.find('Canvas/sumLabel').getComponent(cc.Label).string = num * 4;
                     cc.find('Canvas/sumLabel').active = true;
@@ -111,7 +111,7 @@ cc.Class({
         var obj = {
             type:1,
             coins: num,
-            fee: num * 5,
+            fee: num,
         }
         var str = cc.find('resident').getComponent('residentScript').setObjData(obj);
         var xhr = new XMLHttpRequest();

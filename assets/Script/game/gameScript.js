@@ -39,7 +39,8 @@ cc.Class({
                 _self.moveTop();
             }, 0.1, num);
             _self.score = data.score;
-            cc.find('Canvas/top/right/mid').getComponent(cc.Label).string = data.score;
+            console.log(_self.score);
+            cc.find('Canvas/top/right/mid').getComponent('scoreScript').scoreShow(_self.score);
             cc.find('Canvas/top/right/btm').getComponent(cc.Label).string = "价值:"+ Math.floor(data.score/100) + "元";
             cc.find('Canvas/background/bottomText').getComponent(cc.Label).string = "当前聚宝盆剩余"+data.nb+"个金币";
         });

@@ -71,12 +71,12 @@ cc.Class({
             }
         });
         this.schedule(()=>{
-            this.shake(cc.find('Canvas/invite'),10);
-            this.shake(cc.find('Canvas/packet'),10);
+            this.shake(cc.find('Canvas/invite'));
+            this.shake(cc.find('Canvas/packet'));
         },5);
     },
     //抖动动画
-    shake(node,offset){
+    shake(node){
         let x = node.x;
         let y = node.y;
         let action = cc.sequence(
